@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ciuinh1a2rr54"]
+
+[ext_resource type="FontFile" uid="uid://cwsqjl8w2jkq5" path="res://assets/Kenney Bold.ttf" id="1_we040"]
+[ext_resource type="Script" uid="uid://bi2db8u5tic6r" path="res://Scene/ui.gd" id="1_ycrtq"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1162493185]
+script = ExtResource("1_ycrtq")
+
+[node name="title" type="Label" parent="." unique_id=614280633]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_we040")
+theme_override_font_sizes/font_size = 20
+text = "Coin Dash!"
+
+[node name="level" type="Label" parent="." unique_id=1734864353]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_we040")
+theme_override_font_sizes/font_size = 18
+text = "0"
+
+[node name="score" type="Label" parent="." unique_id=1299901265]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_we040")
+theme_override_font_sizes/font_size = 18
+text = "0"
+horizontal_alignment = 2
+
+[node name="StartButton" type="Button" parent="." unique_id=1644033089]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -47.0
+offset_right = 48.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_we040")
+theme_override_font_sizes/font_size = 20
+text = "Start"
+
+[node name="waitTime" type="Timer" parent="." unique_id=790399402]
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
